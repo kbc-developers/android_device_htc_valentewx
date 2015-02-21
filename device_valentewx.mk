@@ -61,10 +61,6 @@ PRODUCT_COPY_FILES += \
     device/htc/valentewx/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/valentewx/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
