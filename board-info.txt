@@ -1,1 +1,1 @@
-require version-bootloader=1.17.0000|1.17.2222
+require version-bootloader=1.17.0000|1.17.2222|2.08.0000
