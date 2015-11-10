@@ -19,3 +19,7 @@ persist.sys.isUsbOtgEnabled=true
 
 # UMS
 persist.sys.usb.config=mtp
+
+# Multi User Support
+fw.max_users=3
+fw.show_multiuserui=1
