@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # common S4 configs
 $(call inherit-product, device/htc/s4-common/s4.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/valentewx/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/ville/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
@@ -28,26 +28,26 @@ PRODUCT_PACKAGES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/valentewx/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # Media config
 PRODUCT_COPY_FILES += \
-    device/htc/valentewx/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/ville/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/valentewx/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-    device/htc/valentewx/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
-    device/htc/valentewx/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/valentewx/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/valentewx/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/valentewx/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl
+    device/htc/ville/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
+    device/htc/ville/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
+    device/htc/ville/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/ville/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
+    device/htc/ville/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
+    device/htc/ville/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    device/htc/valentewx/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/valentewx/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/valentewx/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+    device/htc/ville/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
+    device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
 # FM radio
 PRODUCT_PACKAGES += \
@@ -66,17 +66,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_LOCALES += ja_JP hdpi
+PRODUCT_LOCALES += en_US hdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/valentewx/valentewx-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/ville/ville-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_DEVICE := valentewx
-PRODUCT_NAME := valentewx
-PRODUCT_BRAND := KDDI
-PRODUCT_MODEL := ISW13HT
+PRODUCT_DEVICE := ville
+PRODUCT_NAME := ville
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := One S
 PRODUCT_MANUFACTURER := HTC
