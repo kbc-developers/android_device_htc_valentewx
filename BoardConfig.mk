@@ -27,10 +27,8 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
-# Require bootloader version
-TARGET_BOARD_INFO_FILE ?= device/htc/valentewx/board-info.txt
-
 # Bootloader
+TARGET_BOARD_INFO_FILE ?= device/htc/valentewx/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := valentewx
 
 # Kernel
@@ -42,13 +40,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/valentewx/bluetooth
 
 # Camera
 BOARD_CAMERA_FRONT_VGA := true
-
-# Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_FIVE_SEARCH_RESPONSES := true
-
-# USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -83,6 +74,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268434944
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Radio
+BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_FIVE_SEARCH_RESPONSES := true
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
