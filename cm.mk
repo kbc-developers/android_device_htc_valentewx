@@ -1,4 +1,4 @@
-$(call inherit-product, device/htc/ville/full_valentewx.mk)
+$(call inherit-product, device/htc/valentewx/full_valentewx.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
