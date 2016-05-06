@@ -53,7 +53,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/valentewx/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
     device/htc/valentewx/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
-    device/htc/valentewxlayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/valentewx/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/valentewx/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
     device/htc/valentewx/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/htc/valentewx/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl
